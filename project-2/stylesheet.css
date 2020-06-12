@@ -1,0 +1,176 @@
+﻿ 
+ :root {
+    --bg-color: hsl(0, 0%, 100%);
+    --topbg-color: hsl(225, 100%, 98%);
+    --cardbg-color: hsl(227, 47%, 96%);
+    --textone-color: hsl(228, 12%, 44%);
+    --texttwo-color: hsl(230, 17%, 14%)
+}
+
+[data-theme="dark"] {
+    --bg-color: hsl(230, 17%, 14%);
+    --topbg-color: hsl(232, 19%, 15%);
+    --cardbg-color: hsl(228, 28%, 20%);
+    --textone-color: hsl(228, 34%, 66%);
+    --texttwo-color: hsl(0, 0%, 100%);
+}
+body
+{
+    
+    margin-left:auto;
+    margin-right:auto;
+    background:linear-gradient(var(--topbg-color) 30%, var(--bg-color) 0%);
+    
+}
+
+
+h1,h2 {
+    color: var(--texttwo-color);
+}
+h6 {
+    letter-spacing: 2px;
+}
+.subheading {
+    color: var(--textone-color);
+}
+.img-l {
+    width:10px;
+    height:10px;
+    position:relative;
+    display:inline;
+}
+.box1 {
+    
+    background-color: var(--cardbg-color);
+    color:var(--textone-color);
+    padding: 20px;
+    text-align: center;
+    border-style:solid none none none;
+    border-top-width:5px;
+}
+.text {
+    display: inline;
+    width: 100px;
+}
+.box2 {
+   color:var(--textone-color);
+    background-color: var(--cardbg-color);
+    padding: 5px;
+    border-style:none;
+    margin:20px 0 20px 0;
+}
+.words {
+    float: left;
+}
+.active, .box1:hover, .box2:hover {
+    background-color:slategrey;
+    cursor:pointer;
+
+    }
+
+.mid {
+    
+    margin:0 104px 0 104px;
+    padding:0 15px 0 15px;
+}
+
+.num {
+    text-align:right;
+}
+.change-place {
+    padding-top: 20px;
+}
+
+/* The switch - the box around the slider */
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:#ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+     .slider:hover {
+        background: linear-gradient(to right, #378fe6 0%, #3eda82 100%);
+    }
+input:checked + .slider {
+  background: linear-gradient(to right, #378fe6 0%, #3eda82 100%);
+
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  background-color:grey;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media (max-width:500px) {
+    body {
+        padding: 0 25px;
+    }
+    .switch-top{
+        
+       text-align:left;
+       position:absolute;
+    }
+    .switch{
+        position:relative;
+        top:0;
+        right:0;
+        padding-top:0;
+       text-align:right;
+    }
+    .myHR {
+        background-color:black;
+        height:2px;
+        border-style:none;
+        width:100%;
+    }
+}
+
+
+
